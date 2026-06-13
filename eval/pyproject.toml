@@ -1,0 +1,21 @@
+[project]
+name = "channel-switching-eval"
+description = "Measures where a model's evaluation-context coupling lives: behavioral channel I(C;Y_b) vs reasoning channel I(C;Y_r), under benign policy-conflict scenarios with monitored/unmonitored cues. Deterministic scoring, no LLM judge."
+readme = "README.md"
+tags = ["eval", "train", "safety", "alignment", "information-theory", "single-turn", "deception", "eval-awareness"]
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "verifiers>=0.1.14",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["channel_switching_eval.py", "analysis.py", "rescore.py", "blind_judge.py", "pyproject.toml", "README.md"]
+
+[tool.verifiers.eval]
+num_examples = 40
+rollouts_per_example = 2

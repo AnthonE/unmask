@@ -1,0 +1,7 @@
+# local tooling — never publish to the public repos
+.venv/
+__pycache__/
+*.pyc
+outputs/
+results_quick.json
+.DS_Store

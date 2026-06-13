@@ -1,0 +1,6 @@
+# ship the slot, not the log data
+*/
+!*/
+*.jsonl
+*.json
+!README.md
